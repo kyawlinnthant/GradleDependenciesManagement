@@ -1,0 +1,1 @@
+/Users/barry/Documents/Android Projs/GradleDependenciesManagement/buildSrc/build/classes/kotlin/main/AppConfig.class:/Users/barry/Documents/Android Projs/GradleDependenciesManagement/buildSrc/build/classes/kotlin/main/Versions.class
