@@ -51,16 +51,16 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:${Versions.coreKtx}")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleKtx}")
-    implementation("androidx.activity:activity-compose:${Versions.composeActivity}")
-    implementation("androidx.compose.ui:ui:${Versions.compose}")
-    implementation("androidx.compose.ui:ui-tooling-preview:${Versions.compose}")
-    implementation("androidx.compose.material3:material3:${Versions.material3}")
-    testImplementation("junit:junit:${Versions.unitJunit}")
-    androidTestImplementation("androidx.test.ext:junit:${Versions.androidJunit}")
-    androidTestImplementation("androidx.test.espresso:espresso-core:${Versions.espresso}")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${Versions.compose}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${Versions.compose}")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:${Versions.compose}")
+    implementation(Dependencies.coreKtx)
+    implementation(Dependencies.lifecycleKtx)
+    implementation(Dependencies.composeActivity)
+    implementation(Dependencies.composeUi)
+    implementation(Dependencies.composeTooling)
+    implementation(Dependencies.material3)
+    testImplementation(Dependencies.junitTest)
+    androidTestImplementation(Dependencies.junitAndroid)
+    androidTestImplementation(Dependencies.espresso)
+    androidTestImplementation(Dependencies.composeTest)
+    debugImplementation(Dependencies.composeTestDebug)
+    debugImplementation(Dependencies.composeToolingDebug)
 }

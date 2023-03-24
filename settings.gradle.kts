@@ -15,3 +15,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GradleDependenciesManagement"
 include (":app")
+include(":featureC")
+include(":featureB")
+include(":featureA")

@@ -1,0 +1,56 @@
+// build.gradle for common features
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion AppConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion AppConfig.minSdk
+        targetSdkVersion AppConfig.targetSdk
+        versionCode AppConfig.versionCode
+        versionName AppConfig.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerVersion Versions.composeCompiler
+    }
+    packagingOptions {
+        exclude("META-INF/AL2.0")
+        exclude("META-INF/LGPL2.1")
+    }
+}
+
+dependencies {
+
+    implementation Dependencies.coreKtx
+    implementation Dependencies.lifecycleKtx
+    implementation Dependencies.composeActivity
+    implementation Dependencies.composeUi
+    implementation Dependencies.composeTooling
+    implementation Dependencies.material3
+    testImplementation Dependencies.junitTest
+    androidTestImplementation Dependencies.junitAndroid
+    androidTestImplementation Dependencies.espresso
+    androidTestImplementation Dependencies.composeTest
+    debugImplementation Dependencies.composeTestDebug
+    debugImplementation Dependencies.composeToolingDebug
+}
